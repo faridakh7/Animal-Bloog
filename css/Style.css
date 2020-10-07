@@ -122,6 +122,12 @@
 .whyus{
     margin-bottom: 100px;
 }
+#whychoosTitle{
+font-size: 30px;
+font-weight: 900;
+font-family: "Montserrat", sans-serif;
+
+}
 
 
 .whyus>.container>.col-5{
@@ -135,4 +141,27 @@ width: 100%;
 
 .whyussecond{
     margin-top: 100px;
+}
+
+.whyusiconCare{
+     
+    height: 66px;
+    border-radius: 50%;
+    background-color: #28a745;
+    padding-left: 15px;
+    padding-top: 8px;
+
+}
+
+.whyusiconCare i{
+    font-size: 54px;
+    color: white;
+}
+
+.whyusRow>.col-9> h4 p{
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+.whyusRow>.col-9>p{
+    font-size: 17px;
 }
