@@ -1,14 +1,14 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 
-
-
+/* NAVBAR START */
 .navbar{
     background-color: white !important;
     margin: 20px;
-    font-family: 'Montserrat', sans-serif;
-
 }
 
-.fa-paw{
+.navbar>.col-4> i{
     color: #00bd56;
     font-size: 25px;
 }
@@ -16,47 +16,23 @@
 .navbar-brand{
     font-size: 28px;
     padding-left: 5px;
-
 }
 .navbar-nav li{
     margin-left: 60px;
     text-transform: uppercase;
     font-size: 14px;
 }
+/* NAVBAR END */
 
-/* BIG PIC */
 
-.bigpicParent{
+
+/* BIG PIC START */
+.pictureSection{
     height: 1094px;
     opacity: .9;
 }
 
-
-
-.bigpicParent h1 p{
-    font-family: "Montserrat", Arial, sans-serif;
-
-}
-
-.bigpicParent h1{
-    color: #fff;
-    line-height: 1.2;
-    font-size: 60px;
-    font-weight: 800;
-}
-
-.bigpic{
-    position: relative;
-}
-
-
-.bigpic img{
-    width: 100%;
-    height: 100%;
-}
-
-.abaz{
-   
+.pictureSection>.container{   
     text-align: center;
     z-index: 5;
     position: absolute;
@@ -65,105 +41,108 @@
     padding-left: 15px;
 }
 
-.nebilim{
-    display: flex;
-    justify-content: center !important;
-}
-
-.bigpicText{
+.pictureSectionText{
     margin-top: 25%;
     margin-left: 38%;
 }
 
-.aboutBigpic{
+.pictureSection h1{
+    color: #fff;
+    line-height: 1.2;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+#pictureSectionBackground{
+    position: relative;
+}
+
+
+#pictureSectionBackground img{
+    width: 100%;
+    height: 100%;
+}
+
+.ourWorks{
     width: 100%;
     position: absolute;
     margin-top: -26%;
 }
 
-.aboutBigpic>.container>.row>.col-3{
+.ourWorks>.container>.row>.col-3{
     height: 300px;
     background-color: #28a745;
     color: white;
     margin: 0 29px;
 }
 
-.aboutBigiconheader{
-    width: 120px;
-    height: 120px;
+.ourWorkIconsHeader{
+    width: 100px;
+    height: 100px;
     margin:-60px 0 20px 72px;
     border: 1px solid white;
     border-radius: 50%;
     background-color: white;
 }
 
-.aboutBigiconheader i{
-    margin: 26px;
+.ourWorkIconsHeader i{
+    margin: 15px;
     font-size: 60px;
     color: #28a745;
 }
 
-.aboutBigiconfooter{
+.ourWorkIconsFooter{
     width: 50px;
     height: 50px;
-    margin: 21px 0px 0px 103px;
+    margin: 16px 0px 0px 103px;
     border: 1px solid white;
     border-radius: 50%;
     background-color: white;
     position: absolute;
 }
 
-.aboutBigiconfooter i{
+.ourWorkIconsFooter i{
     margin: 8px 0px 0px 16px;
     font-size: 35px;
     color: #28a745;
 }
-
-#whychoosTitle{
-font-size: 30px;
-font-weight: 900;
-font-family: "Montserrat", sans-serif;
-
-}
+/* BIG PIC END */
 
 
+/* WHY-US START */
 .whyus>.container>.col-5{
-   height: 280px;
+    height: 280px;
+ }
+
+#whyusTitle{
+    font-size: 30px;
+    font-weight: 900;
+}
+.whyusImg img{
+    width: 100%;
 }
 
-.imgDIV img{
-width: 100%;
-
-}
-
-.whyussecond{
-    margin-top: 50px;
-}
-
-.whyusiconCare{
-     
+.whyusIcons{     
     height: 66px;
     border-radius: 50%;
     background-color: #28a745;
     padding-left: 15px;
     padding-top: 8px;
-
 }
 
-.whyusiconCare i{
+.whyusIcons i{
     font-size: 54px;
     color: white;
 }
 
-.whyusRow>.col-9> h4 p{
-    font-family: "Montserrat", Arial, sans-serif;
-}
-
-.whyusRow>.col-9>p{
+.whyusText>.col-9>p{
     font-size: 17px;
 }
+/* WHY-US END */
 
-/* OWL CARUSEL START */
+
+
+/* BLOG OWL CARUSEL START */
 .owlitem {
     margin-top: 200px;
     margin-bottom: 50px;
@@ -177,6 +156,17 @@ width: 100%;
 }
 
 
+.card-text{
+    max-height: 120px;
+    overflow: hidden;
+    height: 120px;
+}
+
+.card-title{
+    height: 73px;
+    overflow: hidden;
+}
+
 .owl-nav {
     display: block !important;
 }
@@ -187,16 +177,15 @@ width: 100%;
 
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev {
-    font-size: 40px;
+    
+    font-size: 65px;
     position: absolute;
-    top: 18%
+    top: 52%;
 }
 
 .owl-carousel .owl-nav button.owl-next {
-    right: 4%;
+    right: -1%;
 }
+/* BLOG OWL CARUSEL END */
 
-.owl-carousel .owl-nav button.owl-prev {
-    right: 6%;
-}
-/* OWL CARUSEL END */
+
