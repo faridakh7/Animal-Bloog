@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Sehife</title>
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
@@ -25,11 +24,11 @@
 
 <body>
     <!-- NAVBAR START -->
-    <header>
-        <div class="container">
-            <div class="row">
+    <header id="navbar">
+        <div class="container-fluid">
+            <div class="row d-block">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="col-4">
+                    <div class="col-3">
                         <i class="fas fa-paw"></i>
                         <a class="navbar-brand" href="index.html">Pet Blog</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -37,23 +36,31 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
-                    <div class="col-8">
+                    <div class="col-9">
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="index.html">Ana Səhifə <span
+                                            class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
+                                    <a class="nav-link" href="about.html">Haqqımızda</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
+                                    <a class="nav-link" href="blog.html">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Gallery</a>
+                                    <a class="nav-link" href="gallery.html">Qalareya</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="contact.html">Əlaqə</a>
+                                </li>
+
+                            </ul>
+                            <ul class="LoginandRegister">
+                                <li class="nav-item">
+                                    <button type="button"  class="btn btn-info btn-sm"><a href="login.html">Giriş</a></button>
+                                    <button type="button" class="btn btn-secondary btn-sm ml-1"><a href="register.html">Qeydiyyat</a></button>
                                 </li>
                             </ul>
                         </div>
