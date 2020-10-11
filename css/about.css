@@ -8,7 +8,7 @@
 }
 
 .about{
-    background: url(/img/about.jpg) no-repeat left;
+    background: url('/img/about.jpg') no-repeat left;
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;
@@ -37,6 +37,10 @@
 
 
 @media screen and (max-width:1000px){
+    .about-section{
+        min-height: 0vh;
+
+    }
     .about{
         background-size: 100%;
         padding: 60px 40px;

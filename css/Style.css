@@ -5,11 +5,10 @@
 }
 
 
-/* NAVBAR START */
 #navbar{
     top: 0;
     position: sticky;
-    z-index: 100;
+    z-index: 10000;
 }
 .navbar{
     background-color: white !important;
@@ -31,12 +30,15 @@
     font-size: 16px;
 }
 
+.navbar-nav>.active>a{
+    font-size: 16px;
+    padding: 8px;
+}
+
 .LoginandRegister{
     position: relative;
-    margin-left: 9%;
     text-align: center;
     line-height: 13px;
-    margin-top: 10px;
 }
 
 .LoginandRegister li{
@@ -45,13 +47,29 @@
     flex-wrap: wrap;
     text-transform: uppercase;
 }
-.LoginandRegister>.nav-item a{
+.LoginandRegister>.navbar-brand a{
     color: white;
     text-decoration: none;
 }
+
+.navbar>.col-9{
+    margin: 0px 1px 0px 0px;
+
+}
+
 /* NAVBAR END */
 
+@media screen and (max-width:1300){
+    .col-7{
+        margin: 0px 20px 0px 0px;
+    }
+}
 
+@media screen and (max-width:763){
+    .col-9{
+        margin: 0px 1px 0px 0px;
+    }
+}
 
 /* BIG PIC START */
 .pictureSection{
@@ -181,6 +199,8 @@
     margin: 9% 0 0 93%;
     font-size: 20px;
     color: black;
+    z-index: 100000;
+    text-decoration: none;
 }
 
 .owlitem {
