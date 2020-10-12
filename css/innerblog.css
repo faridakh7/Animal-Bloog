@@ -1,0 +1,25 @@
+.innerBlog{
+    margin: 100px 100px;
+}
+.blogDetails{
+    width: 820px;
+}
+.innerImg{
+    width: 800px;
+    height: auto;
+}
+
+.innerImg img{
+    width: 100%;
+    height: 100%;
+}
+
+.innerText{
+    margin-top: 20px;
+}
+
+.innerText p{
+    text-align: justify;
+    margin-top: 50px;
+    font-size: 20px;
+}
