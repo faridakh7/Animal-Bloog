@@ -8,9 +8,8 @@
 }
 
 .about{
-    background: url('/img/about.jpg') no-repeat left;
+    background: url("https://contentus.net/blog/wp-content/uploads/2017/11/kopekle-araba-yolculugu-bilmeniz-gerekenler.jpg") no-repeat left;
     background-size: 55%;
-    background-color: #fdfdfd;
     overflow: hidden;
     padding: 100px 0;
 }

@@ -10,11 +10,11 @@
 .card-deck img {
     width: 100%;
     height: 225px;
-    border-radius: 20px 20px 0 0 ;
+    border-radius: 10px 10px 0 0 ;
 }
 
 .card{
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 
@@ -28,16 +28,10 @@
     height: 73px;
     overflow: hidden;
 }
-
-@media screen and (max-width: 880px) {
-	.card-deck{
-        width: 500px;
-	}
-}
-
 .Blogbottomside{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .blogMore .btn a{
@@ -45,6 +39,14 @@
     color: white;
     text-decoration: none;
 }
+
+@media screen and (max-width: 880px) {
+	.card-deck{
+        width: 500px;
+	}
+}
+
+
 
 
 /* BLOG OWL CARUSEL END
