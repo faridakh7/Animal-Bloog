@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haqqımızda</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Ana Sehife</title>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- OWL-Carusel -->
+    <link rel="stylesheet" href="{{  url_for('static', filename='lib/owl-carousel/assets/owl.carousel.min.css')   }}"rel="stylesheet">
+    <link rel="stylesheet" href="{{  url_for('static', filename='lib/owl-carousel/assets/owl.theme.default.min.css')   }}"rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- STYLE-CSS -->
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/style.css')   }}" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +27,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="col-3">
                         <i class="fas fa-paw"></i>
-                        <a class="navbar-brand" href="index.html">Pet Blog</a>
+                        <a class="navbar-brand" href="{{  url_for('index')}}">Pet Blog</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -31,11 +37,11 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <a class="navbar-brand" href="index.html">Ana Səhifə<span
+                                    <a class="navbar-brand" href="{{  url_for('index')}}">Ana Səhifə<span
                                             class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="about.html">Haqqımızda</a>
+                                    <a class="nav-link" href="{{  url_for('about')}}">Haqqımızda</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="blog.html">Blog</a>
@@ -65,20 +71,11 @@
     </header>
     <!-- NAVBAR END -->
 
-    <!-- ABOUT SECTION START -->
-    <section class="about-section">
-        <section class="about">
-            <div class="aboutContainer">
-                <h1>Haqqımızda</h1>
-                <p class="aboutText">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis repellendus ut nobis quas
-                    voluptatum ipsam, dolorum laudantium ducimus velit ex! Ipsam inventore, deserunt eius provident ea
-                    cupiditate dolore labore nobis?
-                </p>
-            </div>
-        </section>
-    </section>
-    <!-- ABOUT SECTION END -->
+    {% block content %}
+
+    {% endblock content %}
+
+
 
     <!-- FOOTER START -->
     <footer class="footer">
@@ -90,6 +87,9 @@
                     Saytımızın məqsədi haqqında məlumatlar olacaq burda
                 </p>
             </div>
+
+
+
             <div class="footer-items quicklinks">
                 <h2>Sürətli keçid üçün</h2>
                 <div class="border"></div>
@@ -124,11 +124,13 @@
                     <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                 </div>
             </div>
-
         </div>
     </footer>
     <!-- FOOTER END -->
 
+
+    <script src="{{  url_for('static', filename='lib/owl-carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{  url_for('static', filename='js/script.js') }}"></script>
     <!-- Bootstrap JS CDN START -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

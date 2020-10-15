@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/loginregister.css" />
-    <title>Daxil olun</title>
-  </head>
-  <body>
-    <div class="SigninSection">
-      <div class="forms-container">
-        <div class="signin-signup">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{  url_for('static', filename='css/loginregister.css')   }}" />
+  <title>Daxil olun</title>
+</head>
+
+<body>
+  <div class="SigninSection">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form method="POST" action="">
+          {{ form.hidden_tag() }}
           <form action="#" class="sign-in-form">
             <h2 class="title">Hesabınıza daxil olun</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="İstifadəçi Adı" />
+              {{ form.username(placeholder='İstifadəçi Adı')}}
             </div>
-            
+
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Şifrə" />
+              {{ form.password(placeholder='Şifrə')}}
             </div>
-            <input type="submit" value="Daxil ol" class="btn solid" />
+            {{ form.submit(value='Daxil ol', class='btn solid')}}
+
+            <!-- <input type="submit" value="Daxil ol" class="btn solid" /> -->
             <p class="social-text">vəya Social Media hesabınız ilə daxil olmaq üçün</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -42,27 +45,27 @@
               </a>
             </div>
           </form>
-          <form action="#" class="sign-up-form">
+          <!-- <form action="#" class="sign-up-form">
             <h2 class="title">Qeydiyyat</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="İstifadəçi Adı" />
+              {{ form.username(placeholder='İstifadəçi Adı')}}
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Ad" />
+              {{ form.name(placeholder='İstifadəçi Adı')}}
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Soyad" />
+              {{ form.surname(placeholder='Soyad')}}
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              {{ form.email(placeholder='Email')}}
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Şifrə" />
+              {{ form.password(placeholder='Şifrə')}}
             </div>
             <input type="submit" class="btn" value="Qeydiyyatdan Keç" />
             <p class="social-text">vəya Social Media hesabınız ilə daxil olmaq üçün</p>
@@ -80,38 +83,41 @@
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>Heyy sən, saytımızı yeni kəşf etmisən?</h3>
-            <p>
-              Və hələ də Qeydiyyatdan keçməmisənsə nəyi gözləyirsən
-            </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Qeydiyyat
-            </button>
-          </div>
-          <img src="img/undraw_dog_walking_0jpt.svg" class="image" alt="" />
-        </div>
-        <div class="panel right-panel">
-          <div class="content">
-            <h3>Artıq hesabınız var?</h3>
-            <p>
-               O zaman daxil olun
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Daxil ol
-            </button>
-          </div>
-          <img src="img/undraw_chilling_8tii.svg" class="image" alt="" />
-        </div>
+          </form> -->
+        </form>
       </div>
     </div>
 
-    <script src="js/loginRegister.js"></script>
-  </body>
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Heyy sən, saytımızı yeni kəşf etmisən?</h3>
+          <p>
+            Və hələ də Qeydiyyatdan keçməmisənsə nəyi gözləyirsən
+          </p>
+          <button class="btn transparent" id="sign-up-btn">
+            Qeydiyyat
+          </button>
+        </div>
+        <img src="{{  url_for('static', filename='img/undraw_dog_walking_0jpt.svg')   }}
+          " class="image" alt="" />
+      </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>Artıq hesabınız var?</h3>
+          <p>
+            O zaman daxil olun
+          </p>
+          <button class="btn transparent" id="sign-in-btn">
+            Daxil ol
+          </button>
+        </div>
+        <img src="{{  url_for('static', filename='img/undraw_chilling_8tii.svg')   }}" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="{{  url_for('static', filename='js/loginRegister.js') }}"></script>
+</body>
+
 </html>
