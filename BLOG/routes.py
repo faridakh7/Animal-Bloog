@@ -12,6 +12,22 @@ def index():
 def about():
     return render_template('about.html', title='ABOUT')
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html', title='BLOG')
+
+@app.route('/innerblog')
+def innerblog():
+    return render_template('inner-blog.html', title='INNER-BLOG')
+
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html', title='GALLERY')
+
+    
+@app.route('/contact')
+def contact():
+    return render_template('contact.html', title='CONTACT')
 
 @app.route('/register')
 def register():

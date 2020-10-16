@@ -24,7 +24,7 @@
     <header id="navbar">
         <div class="container-fluid">
             <div class="row d-block">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="col-3">
                         <i class="fas fa-paw"></i>
                         <a class="navbar-brand" href="{{  url_for('index')}}">Pet Blog</a>
@@ -44,20 +44,20 @@
                                     <a class="nav-link" href="{{  url_for('about')}}">Haqqımızda</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="blog.html">Blog</a>
+                                    <a class="nav-link" href="{{  url_for('blog')}}">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="gallery.html">Qalareya</a>
+                                    <a class="nav-link" href="{{  url_for('gallery')}}">Qalareya</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Əlaqə</a>
+                                    <a class="nav-link" href="{{  url_for('contact')}}">Əlaqə</a>
                                 </li>
                                 <ul class="LoginandRegister d-flex">
                                     <li class="navbar-brand">
                                         <button type="button" class="btn btn-info btn-sm"><a
-                                                href="login.html">Giriş</a></button>
+                                                href="{{  url_for('login')}}">Giriş</a></button>
                                         <button type="button" class="btn btn-secondary btn-sm ml-1"><a
-                                                href="register.html">Qeydiyyat</a></button>
+                                                href="{{  url_for('register')}}">Qeydiyyat</a></button>
                                     </li>
                                 </ul>
                             </ul>
@@ -132,7 +132,8 @@
     <script src="{{  url_for('static', filename='lib/owl-carousel/owl.carousel.min.js') }}"></script>
     <script src="{{  url_for('static', filename='js/script.js') }}"></script>
     <!-- Bootstrap JS CDN START -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Bootstrap JS CDN END -->

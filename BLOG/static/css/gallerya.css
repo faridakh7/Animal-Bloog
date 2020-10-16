@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
 }
 
 section{
@@ -42,6 +41,7 @@ section ul li.active{
 }
 
 .dog .dogbox img{
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;

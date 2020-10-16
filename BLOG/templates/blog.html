@@ -1,272 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloq</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+{% block content%}
+<link rel="stylesheet" href="{{  url_for('static', filename='css/blog.css')   }}" rel="stylesheet">
 
-<body>
-    <!-- NAVBAR START -->
-    <header id="navbar">
-        <div class="container-fluid">
-            <div class="row d-block">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="col-3">
-                        <i class="fas fa-paw"></i>
-                        <a class="navbar-brand" href="index.html">Pet Blog</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                    <div class="col-9 mt-3">
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a class="navbar-brand" href="index.html">Ana Səhifə<span
-                                            class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">Haqqımızda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="blog.html">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="gallery.html">Qalareya</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Əlaqə</a>
-                                </li>
-                                <ul class="LoginandRegister d-flex">
-                                    <li class="navbar-brand">
-                                        <button type="button" class="btn btn-info btn-sm"><a
-                                                href="login.html">Giriş</a></button>
-                                        <button type="button" class="btn btn-secondary btn-sm ml-1"><a
-                                                href="register.html">Qeydiyyat</a></button>
-                                    </li>
-                                </ul>
-                            </ul>
+
+<!-- BLOG SECTION START -->
+<section class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="card-deck col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{  url_for('static', filename='img/rottweiler-puppy.png')   }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
+                        <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
+                            responsible owners, we would like to care for our Rotties the best we can..</p>
+                        <div class="Blogbottomside">
+                            <p class="card-date"><small class="text-muted">AUGEST 18, 2020</small></p>
+                            <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
+                                        href="{{  url_for('innerblog')}}">Davamı</a></button></p>
                         </div>
                     </div>
-
-                </nav>
-
+                </div>
             </div>
-        </div>
-    </header>
-    <!-- NAVBAR END -->
+            <div class="card-deck col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{  url_for('static', filename='img/doberman-3.jpg')   }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
+                        <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
+                            responsible owners, we would like to care for our Rotties the best we can..</p>
+                        <div class="Blogbottomside">
+                            <p class="card-date"><small class="text-muted">AUGEST 18, 2020</small></p>
+                            <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
+                                        href="{{  url_for('innerblog')}}">Davamı</a></button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-deck col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{  url_for('static', filename='img/Husky-German-Shepherd-puppy.png')   }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">9 Things to Know Before Getting a German Shepherd Husky Mix</h5>
+                        <p class="card-text">Does the German Shepherd Husky Mix or Shepsky have the potential to
+                            be your next dog? The thought behind crossing these breeds may spring from..</p>
+                        <div class="Blogbottomside">
+                            <p class="card-date"><small class="text-muted">SEPTEMBER 08, 2020</small></p>
+                            <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
+                                        href="{{  url_for('innerblog')}}">Davamı</a></button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- BLOG SECTION START -->
-    <section class="blog">
-        <div class="container">
-            <div class="row">
-                <div class="card-deck col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="img/rottweiler-puppy.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
-                            <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
-                                responsible owners, we would like to care for our Rotties the best we can..</p>
-                            <div class="Blogbottomside">
-                                <p class="card-date"><small class="text-muted">AUGEST 18, 2020</small></p>
-                                <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
-                                            href="inner-blog.html">Davamı</a></button></p>
-                            </div>
+            <div class="card-deck col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{  url_for('static', filename='img/Husky-German-Shepherd-puppy.png')   }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">9 Things to Know Before Getting a German Shepherd Husky Mix</h5>
+                        <p class="card-text">Does the German Shepherd Husky Mix or Shepsky have the potential to
+                            be your next dog? The thought behind crossing these breeds may spring from..</p>
+                        <div class="Blogbottomside">
+                            <p class="card-date"><small class="text-muted">DECEMBER 30, 2020</small></p>
+                            <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
+                                        href="{{  url_for('innerblog')}}">Davamı</a></button></p>
                         </div>
                     </div>
                 </div>
-                <div class="card-deck col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="img/doberman-3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
-                            <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
-                                responsible owners, we would like to care for our Rotties the best we can..</p>
-                            <div class="Blogbottomside">
-                                <p class="card-date"><small class="text-muted">AUGEST 18, 2020</small></p>
-                                <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
-                                            href="inner-blog.html">Davamı</a></button></p>
-                            </div>
+            </div>
+            <div class="card-deck col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{  url_for('static', filename='img/Dogs-inner-thoughts.png')   }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Animal Communicator – Can They Talk to Your Dog?</h5>
+                        <p class="card-text">Communicating with your dog or any other pet you might have sounds
+                            great, doesn’t it? People who are seeking advice from so-called animal communicators
+                            are..</p>
+                        <div class="Blogbottomside">
+                            <p class="card-date"><small class="text-muted">SEPTEMBER 15, 2020</small></p>
+                            <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
+                                        href="{{  url_for('innerblog')}}">Davamı</a></button></p>
                         </div>
                     </div>
                 </div>
-                <div class="card-deck col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="img/Husky-German-Shepherd-puppy.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">9 Things to Know Before Getting a German Shepherd Husky Mix</h5>
-                            <p class="card-text">Does the German Shepherd Husky Mix or Shepsky have the potential to
-                                be your next dog? The thought behind crossing these breeds may spring from..</p>
-                            <div class="Blogbottomside">
-                                <p class="card-date"><small class="text-muted">SEPTEMBER 08, 2020</small></p>
-                                <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
-                                    href="inner-blog.html">Davamı</a></button></p>
-                            </div>
+            </div>
+            <div class="card-deck col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{  url_for('static', filename='img/doberman-6.jpg')   }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
+                        <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
+                            responsible owners, we would like to care for our Rotties the best we can..</p>
+                        <div class="Blogbottomside">
+                            <p class="card-date"><small class="text-muted">MAY 12, 2020</small></p>
+                            <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
+                                        href="{{  url_for('innerblog')}}">Davamı</a></button></p>
                         </div>
                     </div>
                 </div>
-
-                <div class="card-deck col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="img/Husky-German-Shepherd-puppy.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">9 Things to Know Before Getting a German Shepherd Husky Mix</h5>
-                            <p class="card-text">Does the German Shepherd Husky Mix or Shepsky have the potential to
-                                be your next dog? The thought behind crossing these breeds may spring from..</p>
-                            <div class="Blogbottomside">
-                                <p class="card-date"><small class="text-muted">DECEMBER 30, 2020</small></p>
-                                <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
-                                    href="login.html">Davamı</a></button></p>
-                            </div>
+            </div>
+            <div class="card-deck col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{  url_for('static', filename='img/doberman-6.jpg')   }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
+                        <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
+                            responsible owners, we would like to care for our Rotties the best we can..</p>
+                        <div class="Blogbottomside">
+                            <p class="card-date"><small class="text-muted">AUGEST 08, 2020</small></p>
+                            <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
+                                        href="{{  url_for('innerblog')}}">Davamı</a></button></p>
                         </div>
                     </div>
                 </div>
-                <div class="card-deck col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="img/Dogs-inner-thoughts.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Animal Communicator – Can They Talk to Your Dog?</h5>
-                            <p class="card-text">Communicating with your dog or any other pet you might have sounds
-                                great, doesn’t it? People who are seeking advice from so-called animal communicators
-                                are..</p>
-                            <div class="Blogbottomside">
-                                <p class="card-date"><small class="text-muted">SEPTEMBER 15, 2020</small></p>
-                                <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
-                                    href="login.html">Davamı</a></button></p>
-                            </div>
+            </div>
+            <div class="card-deck col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{  url_for('static', filename='img/Husky-3.jpg')   }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
+                        <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
+                            responsible owners, we would like to care for our Rotties the best we can..</p>
+                        <div class="Blogbottomside">
+                            <p class="card-date"><small class="text-muted">MAY 08, 2020</small></p>
+                            <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
+                                        href="{{  url_for('innerblog')}}">Davamı</a></button></p>
                         </div>
                     </div>
                 </div>
-                <div class="card-deck col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="img/doberman-6.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
-                            <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
-                                responsible owners, we would like to care for our Rotties the best we can..</p>
-                            <div class="Blogbottomside">
-                                <p class="card-date"><small class="text-muted">MAY 12, 2020</small></p>
-                                <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
-                                    href="login.html">Davamı</a></button></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-deck col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="img/doberman-6.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
-                            <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
-                                responsible owners, we would like to care for our Rotties the best we can..</p>
-                            <div class="Blogbottomside">
-                                <p class="card-date"><small class="text-muted">AUGEST 08, 2020</small></p>
-                                <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
-                                    href="login.html">Davamı</a></button></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-deck col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="img/Husky-3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Rottweiler Growth Chart – When Are Rottweilers Fully Grown?</h5>
-                            <p class="card-text">Getting a Rottweiler puppy is such an exciting thing and as
-                                responsible owners, we would like to care for our Rotties the best we can..</p>
-                            <div class="Blogbottomside">
-                                <p class="card-date"><small class="text-muted">MAY 08, 2020</small></p>
-                                <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
-                                    href="login.html">Davamı</a></button></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-deck col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="img/doberman-2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">9 Things to Know Before Getting a German Shepherd Husky Mix</h5>
-                            <p class="card-text">Does the German Shepherd Husky Mix or Shepsky have the potential to
-                                be your next dog? The thought behind crossing these breeds may spring from..</p>
-                            <div class="Blogbottomside">
-                                <p class="card-date"><small class="text-muted">AUGEST 18, 2020</small></p>
-                                <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
-                                    href="login.html">Davamı</a></button></p>
-                            </div>
+            </div>
+            <div class="card-deck col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{  url_for('static', filename='img/doberman-2.jpg')   }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">9 Things to Know Before Getting a German Shepherd Husky Mix</h5>
+                        <p class="card-text">Does the German Shepherd Husky Mix or Shepsky have the potential to
+                            be your next dog? The thought behind crossing these breeds may spring from..</p>
+                        <div class="Blogbottomside">
+                            <p class="card-date"><small class="text-muted">AUGEST 18, 2020</small></p>
+                            <p class="blogMore"><button type="button" class="btn btn-success btn-sm"><a
+                                        href="{{  url_for('innerblog')}}">Davamı</a></button></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- BLOG SECTION END -->
+    </div>
+</section>
+<!-- BLOG SECTION END -->
 
-    <!-- FOOTER START -->
-    <footer class="footer">
-        <div class="inner-footer">
-
-            <div class="footer-items">
-                <h1>PET BLOG AZERBAIJAN</h1>
-                <p>
-                    Saytımızın məqsədi haqqında məlumatlar olacaq burda
-                </p>
-            </div>
-
-
-
-            <div class="footer-items quicklinks">
-                <h2>Sürətli keçid üçün</h2>
-                <div class="border"></div>
-                <ul>
-                    <a href="">
-                        <li>Blog</li>
-                    </a>
-                    <a href="">
-                        <li>Haqqımızda</li>
-                    </a>
-                    <a href="">
-                        <li>Contact</li>
-                    </a>
-                    <a href="">
-                        <li>Gallery</li>
-                    </a>
-                </ul>
-            </div>
-
-            <div class="footer-items">
-                <h2>Bizimlə əlaqə</h2>
-                <div class="border"></div>
-                <ul>
-                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>Sizə Yaxın hər yerdə</li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i>012 555 55 55</li>
-                    <li><i class="fa fa-envelope" aria-hidden="true"></i>farid.ahmadov97@gmail.com</li>
-                </ul>
-                <div class="social-media">
-                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-        </div>
-    </footer>
-    <!-- FOOTER END -->
-
-    <!-- Bootstrap JS CDN START -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Bootstrap JS CDN END -->
-</body>
-
-</html>
+{% endblock content %}
