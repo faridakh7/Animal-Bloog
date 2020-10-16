@@ -1,4 +1,4 @@
-from flask  import render_template
+from flask  import render_template, flash, redirect, url_for
 from BLOG import app
 from BLOG.forms import RegisterForm, LoginForm
 
@@ -29,12 +29,19 @@ def gallery():
 def contact():
     return render_template('contact.html', title='CONTACT')
 
-@app.route('/register')
+@app.route('/register',  methods=['GET','POST'])
 def register():
-    form= RegisterForm()
+    form = RegisterForm()
+    if form.validate_on_submit():
+        flash(f'{form.username.data} account created', 'success')
+        return redirect(url_for('index'))
     return render_template('register.html', title='REGISTER', form=form)
 
-@app.route('/login')
+
+@app.route('/login',  methods=['GET','POST'])
 def login():
-    form=  RegisterForm()
+    form = LoginForm()
+    if form.validate_on_submit():
+        flash(f'{form.username.data} account created', 'success')
+        return redirect(url_for('index'))
     return render_template('login.html', title='LOGIN', form=form)

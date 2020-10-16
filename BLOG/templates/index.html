@@ -2,10 +2,20 @@
 
 {% block content%}
 <!-- BIG Picture START -->
+
 <section>
     <div class="pictureSection">
         <div class="container">
             <div class="row">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{  category  }}">
+                                 {{  message  }}
+                            </div>
+                         {% endfor %}
+                     {% endif %}
+                {% endwith %}
                 <div class="d-flex justify-content-center">
                     <div class="col-md-11 pictureSectionText">
                         <h1 class="mb-4">Highest Quality Care For Pets You'll Love</h1>
@@ -78,6 +88,7 @@
 
 </section>
 <!-- BIG Picture END -->
+
 
 
 <!-- Why Us Start -->

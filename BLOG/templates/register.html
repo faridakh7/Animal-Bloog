@@ -9,40 +9,12 @@
 
   <title>Qeydiyyat</title>
 </head>
-
 <logregister>
   <div class="SigninSection sign-up-mode">
     <div class="forms-container">
       <div class="signin-signup">
-        <form method="POST" action="">
-          {{ form.hidden_tag() }}
-          <!-- <h2 class="title">Hesabınıza daxil olun</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            {{ form.username(placeholder='İstifadəçi Adı')}}
-          </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            {{ form.password(placeholder='Şifrə')}}
-
-          </div> -->
-          <!-- <input type="submit" value="Daxil ol" class="btn solid" />
-          <p class="social-text">vəya Social Media hesabınız ilə daxil olmaq üçün</p>
-          <div class="social-media">
-            <a href="#" class="social-icon">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div> -->
-          <form action="#" class="sign-up-form">
+          <form method="POST" action="" class="sign-up-form">
+            {{ form.hidden_tag() }}
             <h2 class="title">Qeydiyyat</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -64,7 +36,7 @@
               <i class="fas fa-lock"></i>
               {{ form.password(placeholder='Şifrə')}}
             </div>
-            {{ form.submit(value='Qeydiyyatdan keç', class='btn')}}
+            {{ form.submit(class='btn solid', value='Qeydiyyat')  }}
             <p class="social-text">vəya Social Media hesabınız ilə daxil olmaq üçün</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -81,7 +53,6 @@
               </a>
             </div>
           </form>
-        </form>
       </div>
     </div>
 

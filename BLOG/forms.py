@@ -7,11 +7,11 @@ class RegisterForm(FlaskForm):
     name= StringField('Name', validators=[DataRequired(), Length(min=2, max=20)])
     surname= StringField('Surname', validators=[DataRequired(), Length(min=2, max=20)])
     email= StringField('Email', validators=[DataRequired(), Email()])
-    password= StringField('Password', validators=[DataRequired()])
-    submit=SubmitField('Submit')
+    password= PasswordField('Password', validators=[DataRequired()])
+    submit=SubmitField('Sign')
 
 
 class LoginForm(FlaskForm):
     username= StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
-    password= StringField('Password', validators=[DataRequired()])
-    submit=StringField('Sign')
+    password= PasswordField('Password', validators=[DataRequired()])
+    submit=SubmitField('Sign')

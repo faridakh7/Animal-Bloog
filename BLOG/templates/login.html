@@ -13,22 +13,19 @@
   <div class="SigninSection">
     <div class="forms-container">
       <div class="signin-signup">
-        <form method="POST" action="">
-          {{ form.hidden_tag() }}
-          <form action="#" class="sign-in-form">
+          <form method="POST" action="" class="sign-in-form">
+            {{ form.hidden_tag() }}
             <h2 class="title">Hesabınıza daxil olun</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              {{ form.username(placeholder='İstifadəçi Adı')}}
+              {{ form.username(placeholder='İstifadəçi adı')}}
             </div>
 
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              {{ form.password(placeholder='Şifrə')}}
+              {{ form.password(placeholder='Şifrə')  }}
             </div>
-            {{ form.submit(value='Daxil ol', class='btn solid')}}
-
-            <!-- <input type="submit" value="Daxil ol" class="btn solid" /> -->
+            {{ form.submit(class='btn solid', value='Daxil ol')  }}
             <p class="social-text">vəya Social Media hesabınız ilə daxil olmaq üçün</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -45,46 +42,6 @@
               </a>
             </div>
           </form>
-          <!-- <form action="#" class="sign-up-form">
-            <h2 class="title">Qeydiyyat</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              {{ form.username(placeholder='İstifadəçi Adı')}}
-            </div>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              {{ form.name(placeholder='İstifadəçi Adı')}}
-            </div>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              {{ form.surname(placeholder='Soyad')}}
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              {{ form.email(placeholder='Email')}}
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              {{ form.password(placeholder='Şifrə')}}
-            </div>
-            <input type="submit" class="btn" value="Qeydiyyatdan Keç" />
-            <p class="social-text">vəya Social Media hesabınız ilə daxil olmaq üçün</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </form> -->
-        </form>
       </div>
     </div>
 
