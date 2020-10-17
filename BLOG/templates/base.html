@@ -52,14 +52,30 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{  url_for('contact')}}">Əlaqə</a>
                                 </li>
-                                <ul class="LoginandRegister d-flex">
-                                    <li class="navbar-brand">
-                                        <button type="button" class="btn btn-info btn-sm"><a
-                                                href="{{  url_for('login')}}">Giriş</a></button>
-                                        <button type="button" class="btn btn-secondary btn-sm ml-1"><a
-                                                href="{{  url_for('register')}}">Qeydiyyat</a></button>
-                                    </li>
-                                </ul>
+
+
+                                {% if current_user.is_authenticated %}
+                                    <ul class="LoginandRegister d-flex">
+                                        <li class="navbar-brand">
+                                            <button type="button" class="btn btn-info btn-sm ml-3"><a
+                                                    href="{{  url_for('logout')}}">Çıxış etmək</a></button>
+                                        </li>
+                                    </ul>
+                                {% else %}
+                                    <ul class="LoginandRegister d-flex">
+                                        <li class="navbar-brand">
+                                            <button type="button" class="btn btn-info btn-sm"><a
+                                                    href="{{  url_for('login')}}">Giriş</a></button>
+                                            <button type="button" class="btn btn-secondary btn-sm ml-1"><a
+                                                    href="{{  url_for('register')}}">Qeydiyyat</a></button>
+                                        </li>
+                                    </ul>
+                                {% endif %}
+
+
+
+
+
                             </ul>
                         </div>
                     </div>
